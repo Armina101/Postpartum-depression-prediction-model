@@ -10,20 +10,20 @@ Features: Mix of numeric, categorical, and boolean variables
 Target variable: hamd_6m
 
 # Methodology
-Data Cleaning
-Handled missing values (imputed numeric columns with median, categorical columns with mode).
-Replaced known “garbage values” and converted numeric-like text to numbers.
-Removed columns with >40% missing values.
-Checked and capped outliers using 1st and 99th percentile for continuous features.
-Corrected skewed distributions using Yeo-Johnson and log transformations.
-Feature Engineering
-Converted boolean columns to 0/1 integers.
-One-hot encoded categorical features.
-Removed identifier columns (newid, interviewer) to avoid bias.
-Feature Selection
-Removed highly correlated features (threshold = 0.8) while keeping the ones more correlated with the target.
-Scaling
-Standardized numeric features using StandardScaler.
+- Data Cleaning
+- Handled missing values (imputed numeric columns with median, categorical columns with mode).
+- Replaced known “garbage values” and converted numeric-like text to numbers.
+- Removed columns with >40% missing values.
+- Checked and capped outliers using 1st and 99th percentile for continuous features.
+- Corrected skewed distributions using Yeo-Johnson and log transformations.
+- Feature Engineering
+- Converted boolean columns to 0/1 integers.
+- One-hot encoded categorical features.
+- Removed identifier columns (newid, interviewer) to avoid bias.
+- Feature Selection
+- Removed highly correlated features (threshold = 0.8) while keeping the ones more correlated with the target.
+- Scaling
+- Standardized numeric features using StandardScaler.
 
 # Model Training
 Split data into train/test sets (80/20).
