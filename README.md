@@ -47,6 +47,7 @@ Aim is to predict Post Partum Depression using survey and clinical data through 
 
 # Notes
 - Only regression models were used per hackathon rules.
+- Tested Linear Regression, Ridge, and ElasticNet; ElasticNet gave the best performance.
 - Steps were designed to handle unknown/hidden dataset variations without breaking.
 - Visualizations help check model fit and residuals
 
