@@ -1,6 +1,6 @@
 # Postpartum-depression-prediction-model
 This project is built as a part of the requirements for partaking in the She Code Africa AI/ML Challenge.
-Aim is to predict Post Partum Depression using survey and clinical data through regression modeling.
+Aim is to predict Post Partum Depression using the provided dataset through regression modeling.
 
 # Dataset
 - Source: https://drive.google.com/file/d/1b9479YMBAOlU-lIP0wL2wqouuxt1oYi6/view?usp=sharing
