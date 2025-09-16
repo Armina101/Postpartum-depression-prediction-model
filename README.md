@@ -22,13 +22,13 @@ Aim is to predict Post Partum Depression using the provided dataset through regr
     - Summarized numeric/categorical features with descriptive statistics.
     - Examined target variable (hamd_6m) using histogram, boxplot, and value counts → confirmed skewness,             imbalance, and presence of outliers.
 - Feature Engineering
-      - Converted boolean columns to 0/1 integers.
-      - One-hot encoded categorical features.
-      - Removed identifier columns (newid, interviewer) to avoid bias.
+    - Converted boolean columns to 0/1 integers.
+    - One-hot encoded categorical features.
+    - Removed identifier columns (newid, interviewer) to avoid bias.
 - Feature Selection
-      - Removed highly correlated features (threshold = 0.8) while keeping the ones more correlated with the         target.
+    - Removed highly correlated features (threshold = 0.8) while keeping the ones more correlated with the            target.
 - Scaling
-      - Standardized numeric features using StandardScaler.
+    - Standardized numeric features using StandardScaler.
 
 # Model Training & Evaluation
 - ElasticNet regression (with alpha=0.01, l1_ratio=0.9) was selected after testing Linear Regression and Ridge.
