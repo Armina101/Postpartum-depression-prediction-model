@@ -25,16 +25,20 @@ Aim is to predict Post Partum Depression using the provided dataset through regr
 - Scaling
 - Standardized numeric features using StandardScaler.
 
-# Model Training
-- Split data into train/test sets (80/20).
-- ElasticNet Regression with hyperparameter tuning (alpha and l1_ratio) using GridSearchCV.
-- Evaluated using R², MAE, RMSE.
-- Best Model: ElasticNet with alpha=0.01 and l1_ratio=0.9
-- Performance: R² = 0.798, MAE = 0.314, RMSE = 0.448
+# Model Training & Evaluation
+- ElasticNet regression (with alpha=0.01, l1_ratio=0.9) was selected after testing Linear Regression and Ridge.
+- Train/test split (80/20) allowed assessment of generalization.
+- Performance metrics:
+    - R² = 0.798: ~80% of variance in postpartum depression scores explained by the model—indicates strong predictive ability without overfitting.
+    - MAE = 0.314: Average error in predictions is low, showing reliable estimates.
+    - RMSE = 0.448: Confirms that extreme errors are small, consistent with MAE.
 
 # Visualizations
-- Predicted vs Actual: Shows how close predictions are to actual target values.
-- Residual Plot: Checks randomness of residuals to verify model assumptions.
+- Actual vs Predicted plot: The points cluster around the diagonal red dashed line, indicating that the model’s predictions closely match the true target values. Most predictions are very near the actual postpartum depression scores, with minor deviations at the extremes, which shows strong model accuracy.
+  
+- Residuals vs Predicted plot: The residuals are scattered randomly around zero (red dashed line), with no obvious pattern or trend. This confirms that the model assumptions—linearity, homoscedasticity, and independence of errors—are reasonably satisfied. There are no systematic errors, suggesting that the ElasticNet model captures the relationships in the data well.
+
+- Interpretation: Together, these plots validate that the model predictions are reliable and unbiased, with most errors being small and randomly distributed. This supports confidence in using the model for predictions on new data.
 
 # Saving & Deployment
 - Model saved as elasticnet_model.pkl
@@ -49,7 +53,4 @@ Aim is to predict Post Partum Depression using the provided dataset through regr
 - Only regression models were used per hackathon rules.
 - Tested Linear Regression, Ridge, and ElasticNet; ElasticNet gave the best performance.
 - Steps were designed to handle unknown/hidden dataset variations without breaking.
-- Visualizations help check model fit and residuals
-
-# Challenges:
-- Data Cleaning
+- Visualizations help check model fit and residuals.
