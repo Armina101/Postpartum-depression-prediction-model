@@ -36,7 +36,7 @@ Aim is to predict Post Partum Depression using the provided dataset through regr
 # Visualizations
 - Actual vs Predicted plot: The points cluster around the diagonal red dashed line, indicating that the model’s predictions closely match the true target values. Most predictions are very near the actual postpartum depression scores, with minor deviations at the extremes, which shows strong model accuracy.
   
-- Residuals vs Predicted plot: The residuals are scattered randomly around zero (red dashed line), with no obvious pattern or trend. This confirms that the model assumptions—linearity, homoscedasticity, and independence of errors—are reasonably satisfied. There are no systematic errors, suggesting that the ElasticNet model captures the relationships in the data well.
+- Residuals vs Predicted plot: The residuals are scattered randomly around zero (red dashed line), with no obvious pattern or trend. This confirms that the model assumptions' linearity, homoscedasticity, and independence of errors are reasonably satisfied. There are no systematic errors, suggesting that the ElasticNet model captures the relationships in the data well.
 
 - Interpretation: Together, these plots validate that the model predictions are reliable and unbiased, with most errors being small and randomly distributed. This supports confidence in using the model for predictions on new data.
 
